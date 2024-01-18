@@ -22,7 +22,6 @@ logoutBtn.addEventListener('click',()=>{
     signOut(auth).then(() => {
         Swal.fire({
             title: "Logout Sucessfully",
-            text: "You clicked the button!",
             icon: "success"
           });
         setTimeout(function(){

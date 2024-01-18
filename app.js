@@ -13,15 +13,15 @@ signInWithEmailAndPassword(auth, email.value, password.value)
     // console.log(user.email);
     window.location = 'welcome.html'
     localStorage.setItem('items',user.email)
-    email.value = ''
     password.value = ''
   })
   .catch((error) => {
     const errorMessage = error.message;
     Swal.fire({
         icon: "error",
-        title: "Invalid Email Password",
+        title: "Invalid Email Password"
       });
+    
   });
  
 

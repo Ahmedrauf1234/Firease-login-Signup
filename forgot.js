@@ -8,12 +8,16 @@ form.addEventListener('submit', (e)=>{
     e.preventDefault()
     sendPasswordResetEmail(auth, email.value)
   .then(() => {
-    console.log('password reset');
-    // Swal.fire({
-    //     title: "Check Your mail",
-    //     icon: "success"
-    //   });
+    // console.log('password reset');
+    Swal.fire({
+        title: "Check Your mail",
+        icon: "success"
+      });
       email.value = ''
+      setTimeout(function(){
+        window.location = 'index.html'
+      },2000)
+      
     
   })
   .catch((error) => {
